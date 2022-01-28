@@ -22,6 +22,7 @@ public class TimeTwoArr {
         }
         long end = System.currentTimeMillis();
         second = end - start;
+        second = (second / 1000) % 60;
         System.out.println("Поток " + number + " выполнил свою работу за " + second + " миллисекунд");//Выводим время
     }
 }
