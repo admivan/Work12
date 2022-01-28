@@ -1,25 +1,27 @@
 public class TimeTwoArr {
-    float[]arr;
+    float[] arr;
     int number;
 
     /**
      * Констриктор
-     * @param arr принимаем массив
+     *
+     * @param arr    принимаем массив
      * @param number принимаем номер потока
      */
     public TimeTwoArr(float[] arr, int number) {
-        this.arr=arr;
-        this.number=number;
+        this.arr = arr;
+        this.number = number;
     }
-    public void Time(){
+
+    public void Time() {
         float second;
         long start = System.currentTimeMillis();
-        for(int i = 0; i < arr.length; i++){
-            arr[i] = (float)(arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
-          //  System.out.println(arr[i]);
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (float) (arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
+            //  System.out.println(arr[i]);
         }
         long end = System.currentTimeMillis();
-        second=end - start;
-        System.out.println("Поток "+number+" выполнил свою работу за "+second+" миллисекунд");//Выводим время
+        second = end - start;
+        System.out.println("Поток " + number + " выполнил свою работу за " + second + " миллисекунд");//Выводим время
     }
 }

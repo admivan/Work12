@@ -1,14 +1,15 @@
-public class MyThread extends  Thread{
+public class MyThread extends Thread {
     TimeTwoArr arrtwo;
 
     /**
      * Конструктор
-     * @param name принимаем имя
+     *
+     * @param name   принимаем имя
      * @param arrtwo принимаем массив
      */
-    public MyThread(String name,TimeTwoArr arrtwo) {
+    public MyThread(String name, TimeTwoArr arrtwo) {
         super(name);
-        this.arrtwo=arrtwo;
+        this.arrtwo = arrtwo;
     }
 
     /**
@@ -16,8 +17,8 @@ public class MyThread extends  Thread{
      */
     @Override
     public void run() {
-        System.out.println("Поток начал работу "+getName());
+        System.out.println("Поток начал работу " + getName());
         arrtwo.Time();
-        System.out.println("Поток завершил работу "+getName());
+        System.out.println("Поток завершил работу " + getName());
     }
 }
